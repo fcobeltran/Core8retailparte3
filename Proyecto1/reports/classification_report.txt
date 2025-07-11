@@ -1,0 +1,12 @@
+Reporte de Clasificación - Modelo: Decision Tree
+============================================================
+
+              precision    recall  f1-score   support
+
+        Alta       1.00      1.00      1.00        40
+        Baja       1.00      1.00      1.00       121
+       Media       1.00      1.00      1.00        39
+
+    accuracy                           1.00       200
+   macro avg       1.00      1.00      1.00       200
+weighted avg       1.00      1.00      1.00       200

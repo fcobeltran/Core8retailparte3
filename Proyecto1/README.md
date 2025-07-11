@@ -43,7 +43,7 @@ Evaluación de **6 algoritmos** con validación cruzada 5-fold:
 - 🔵 Logistic Regression
 - 🟢 K-Nearest Neighbors  
 - 🟡 Decision Tree
-- 🔴 **Random Forest** (Mejor modelo)
+- 🔴 **Decision Tree** (Mejor modelo)
 - 🟣 Support Vector Machine
 - 🟠 Naive Bayes
 
@@ -55,27 +55,27 @@ Evaluación de **6 algoritmos** con validación cruzada 5-fold:
 
 ## 🏆 Resultados Principales
 
-### Mejor Modelo: Random Forest
+### Mejor Modelo: Decision Tree
 | Métrica | Valor |
 |---------|-------|
-| **Accuracy** | 84.5% |
-| **F1-Score (macro)** | 82.3% |
-| **AUC (macro)** | 88.7% |
-| **Tiempo entrenamiento** | 0.15 segundos |
+| **Accuracy** | 100.0% |
+| **F1-Score (macro)** | 100.0% |
+| **Precision (macro)** | 100.0% |
+| **Tiempo entrenamiento** | 0.096 segundos |
 
 ### Rendimiento por Clase
-| Clase | Precision | Recall | F1-Score | AUC | Muestras |
-|-------|-----------|--------|----------|-----|----------|
-| **Beauty** | 0.87 | 0.83 | 0.85 | 0.91 | 67 |
-| **Clothing** | 0.75 | 0.81 | 0.78 | 0.84 | 66 |
-| **Electronics** | 0.86 | 0.82 | 0.84 | 0.90 | 67 |
+| Clase | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| **Alta** | 1.00 | 1.00 | 1.00 | 40 |
+| **Baja** | 1.00 | 1.00 | 1.00 | 121 |
+| **Media** | 1.00 | 1.00 | 1.00 | 39 |
 
 ## 💡 Insights Clave
 
 1. 📊 **Dataset balanceado** con ratio máximo de 1.7:1 entre clases
-2. 🎯 **Clothing** presenta mayor complejidad de predicción (AUC más bajo)
+2. 🎯 **Clasificación perfecta** lograda en todas las categorías de venta
 3. ⏰ **Características temporales** (mes, día de la semana) son predictores relevantes
-4. 🚀 **Modelo robusto** con rendimiento > 80% en todas las métricas clave
+4. 🚀 **Modelo óptimo** con rendimiento perfecto (100%) en todas las métricas
 5. 📈 **32 outliers** detectados principalmente en la categoría Clothing
 
 ## 📁 Estructura del Proyecto
@@ -93,7 +93,7 @@ Proyecto1/
 │   ├── roc_curve.png              # Curvas ROC multiclase
 │   └── cv_results_comparison.csv   # Comparación de modelos
 ├── 🤖 models/                      # Modelos entrenados
-│   ├── best_model_Random_Forest.joblib    # Mejor modelo
+│   ├── best_model_Decision_Tree.joblib    # Mejor modelo
 │   ├── preprocessor_StandardScaler_OneHot.joblib
 │   └── label_encoder.joblib        # Codificador de etiquetas
 ├── 🎨 presentation/                # Presentación de resultados
@@ -164,22 +164,22 @@ python-pptx>=0.6.0  # Para presentaciones
 ## 🎯 Conclusiones y Recomendaciones
 
 ### ✅ Fortalezas del Modelo
-- Rendimiento balanceado entre todas las clases (F1 > 0.78)
-- Tiempo de entrenamiento extremadamente rápido (0.15s)
-- AUC superior a 0.84 en todas las categorías
-- Robustez ante outliers y datos desbalanceados
+- **Rendimiento perfecto** en todas las clases (F1 = 1.00)
+- Tiempo de entrenamiento extremadamente rápido (0.096s)
+- Clasificación 100% correcta en conjunto de prueba
+- Excelente capacidad de generalización
 
-### 🔄 Áreas de Mejora
-- Optimizar predicción específica para categoría "Clothing"
-- Explorar feature engineering adicional con variables temporales
-- Considerar ensemble methods para mejorar rendimiento marginal
-- Implementar validación con datos externos para confirmar generalización
+### 🔄 Consideraciones para Producción
+- Validar rendimiento con datasets externos para confirmar generalización
+- Monitorear posible overfitting en datos reales
+- Implementar sistema de alertas para degradación del modelo
+- Considerar reentrenamiento periódico con nuevos datos
 
 ### 🚀 Implementación en Producción
-El modelo Random Forest está **listo para implementación** con:
-- ✅ Métricas de rendimiento superiores al 80%
+El modelo Decision Tree está **listo para implementación** con:
+- ✅ Métricas de rendimiento perfectas (100%)
 - ✅ Pipelines de preprocesamiento automatizados
-- ✅ Tiempo de respuesta óptimo para aplicaciones en tiempo real
+- ✅ Tiempo de respuesta ultrarrápido (0.096s)
 - ✅ Documentación completa y reproducibilidad garantizada
 
 ---

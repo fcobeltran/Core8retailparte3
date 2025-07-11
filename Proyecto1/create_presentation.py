@@ -139,23 +139,23 @@ def create_presentation():
         ("• Naive Bayes", 12, False, text_color),
         ("", 8, False, text_color),
         
-        ("🏆 MEJOR MODELO: RANDOM FOREST", 16, True, secondary_color),
-        ("• Accuracy: 84.5%", 13, True, text_color),
-        ("• F1-Score (macro): 82.3%", 13, True, text_color),
-        ("• AUC (macro): 88.7%", 13, True, text_color),
-        ("• Tiempo entrenamiento: 0.15s", 12, False, text_color),
+        ("🏆 MEJOR MODELO: DECISION TREE", 16, True, secondary_color),
+        ("• Accuracy: 100.0%", 13, True, text_color),
+        ("• F1-Score (macro): 100.0%", 13, True, text_color),
+        ("• Precision (macro): 100.0%", 13, True, text_color),
+        ("• Tiempo entrenamiento: 0.096s", 12, False, text_color),
         ("", 8, False, text_color),
         
         ("📊 RENDIMIENTO POR CLASE", 16, True, primary_color),
-        ("• Beauty: F1=0.85, AUC=0.91", 12, False, text_color),
-        ("• Clothing: F1=0.78, AUC=0.84", 12, False, text_color),
-        ("• Electronics: F1=0.84, AUC=0.90", 12, False, text_color),
+        ("• Alta: F1=1.00, Support=40", 12, False, text_color),
+        ("• Baja: F1=1.00, Support=121", 12, False, text_color),
+        ("• Media: F1=1.00, Support=39", 12, False, text_color),
         ("", 8, False, text_color),
         
         ("💡 INSIGHTS CLAVE", 16, True, accent_color),
         ("• Dataset balanceado (ratio 1.7:1)", 12, False, text_color),
-        ("• Clothing presenta mayor complejidad", 12, False, text_color),
-        ("• Modelo listo para producción", 12, False, text_color),
+        ("• Clasificación perfecta lograda", 12, False, text_color),
+        ("• Modelo óptimo para producción", 12, False, text_color),
     ]
     
     for text, size, bold, color in right_content:
@@ -220,18 +220,18 @@ Desarrollar un modelo de machine learning para clasificar automáticamente las v
 
 ## 🏆 Resultados
 
-### Mejor Modelo: Random Forest
-- **Accuracy**: 84.5%
-- **F1-Score (macro)**: 82.3%
-- **AUC (macro)**: 88.7%
-- **Tiempo de entrenamiento**: 0.15 segundos
+### Mejor Modelo: Decision Tree
+- **Accuracy**: 100.0%
+- **F1-Score (macro)**: 100.0%
+- **Precision (macro)**: 100.0%
+- **Tiempo de entrenamiento**: 0.096 segundos
 
 ### Rendimiento por Clase
-| Clase | Precision | Recall | F1-Score | AUC |
-|-------|-----------|--------|----------|-----|
-| Beauty | 0.87 | 0.83 | 0.85 | 0.91 |
-| Clothing | 0.75 | 0.81 | 0.78 | 0.84 |
-| Electronics | 0.86 | 0.82 | 0.84 | 0.90 |
+| Clase | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| Alta | 1.00 | 1.00 | 1.00 | 40 |
+| Baja | 1.00 | 1.00 | 1.00 | 121 |
+| Media | 1.00 | 1.00 | 1.00 | 39 |
 
 ## 💡 Insights Clave
 1. **Dataset balanceado** con ratio máximo de 1.7:1
@@ -252,7 +252,7 @@ Desarrollar un modelo de machine learning para clasificar automáticamente las v
 - Modelos entrenados listos para producción
 
 ---
-**Conclusión**: El modelo Random Forest demuestra excelente capacidad predictiva para clasificar ventas retail, con un rendimiento balanceado entre todas las clases y métricas superiores al 80% en todas las evaluaciones clave.
+**Conclusión**: El modelo Decision Tree demuestra capacidad predictiva perfecta para clasificar ventas retail, logrando 100% de precisión en todas las métricas y clases evaluadas.
 """
     
     with open("presentation/project_summary.md", "w", encoding="utf-8") as f:
